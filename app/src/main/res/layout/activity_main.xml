@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".ui.activity.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:visibility="invisible"
+        android:id="@+id/main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/whiteColor"/>
+
+    <fragment
+        android:id="@+id/myNavHostFragment"
+        android:layout_marginTop="64dp"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:navGraph="@navigation/navigation"
+        app:defaultNavHost="true"
+        android:layout_marginBottom="100dp"
+        tools:layout="@layout/fragment_create_connection" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:visibility="gone"
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/introduction_items_cascade"
+        app:labelVisibilityMode="unlabeled"
+        android:layout_margin="20dp"
+        app:itemIconSize="40dp"
+        app:itemIconTint="@drawable/bottom_navigation_item_selected"
+        app:itemTextColor="@color/whiteColor"
+        app:menu="@menu/main_screen_menu"
+        android:layout_gravity="bottom" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

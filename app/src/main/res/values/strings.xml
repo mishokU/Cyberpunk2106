@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Cyberpunk 2106</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="car_characteristics">car characteristics</string>
+    <string name="welcome_to_remote_car_control">Welcome to Remote Car Control</string>
+    <string name="ip">IP</string>
+    <string name="connect">Соединение…</string>
+    <string name="port">Port</string>
+    <string name="message">Test message</string>
+    <string name="receive_messages">Receive messages</string>
+    <string name="send">Send</string>
+    <string name="toggle">Toggle</string>
+    <string name="settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="biiip">Сигнал</string>
+    <string name="reconnect">reconnect</string>
+    <string name="update_data">Обновить</string>
+    <string name="ride_style">Стиль Езды</string>
+
+    <string name="pump_ready">Выставляю подсос</string>
+    <string name="run_the_car">Завожу…</string>
+    <string name="battery_is_low">Аккумулятор разряжен</string>
+    <string name="handbrake_not_raised">Ручник не поднят</string>
+    <string name="failed_to_run">Не удалось завести</string>
+    <string name="started_with_some_times">Заведен с </string>
+    <string name="engine_is_not_running">Не запущен</string>
+    <string name="warming_up">Прогреваю</string>
+    <string name="here_we_go">Поехали</string>
+
+    <string name="joke">"Проанализировав Ваш стиль езды можно сделать вывод, что Вы мамкин дрифтер. Для последующей безопасной эксплуатации авто советуем удалить электро-дуговую блокировку дифференциала. Все, небольшой расход."</string>
+    
+</resources>

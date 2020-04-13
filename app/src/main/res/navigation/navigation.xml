@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/createConnectionFragment">
+
+    <fragment
+        android:id="@+id/carCharacteristicsFragment"
+        android:name="com.example.eazyremote.ui.fragments.CarCharacteristicsFragment"
+        android:label="CarCharacteristicsFragment" >
+        <action
+            android:id="@+id/action_carCharacteristicsFragment_to_carSettingsFragment"
+            app:destination="@id/carSettingsFragment" />
+        <action
+            android:id="@+id/action_carCharacteristicsFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.example.eazyremote.ui.fragments.MainScreenFragment"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_carCharacteristicsFragment"
+            app:destination="@id/carCharacteristicsFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_carSettingsFragment"
+            app:destination="@id/carSettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createConnectionFragment"
+        android:name="com.example.eazyremote.ui.fragments.CreateConnectionFragment"
+        android:label="fragment_create_connection"
+        tools:layout="@layout/fragment_create_connection" >
+        <action
+            android:id="@+id/action_createConnectionFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carSettingsFragment"
+        android:name="com.example.eazyremote.ui.fragments.CarSettingsFragment"
+        android:label="fragment_car_settings"
+        tools:layout="@layout/fragment_car_settings" >
+        <action
+            android:id="@+id/action_carSettingsFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+        <action
+            android:id="@+id/action_carSettingsFragment_to_carCharacteristicsFragment"
+            app:destination="@id/carCharacteristicsFragment" />
+    </fragment>
+</navigation>
