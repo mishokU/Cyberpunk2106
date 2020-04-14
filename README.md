@@ -19,6 +19,4 @@ There are four fragments to work on Single Activity pattern. We have Main Activi
 
 Screen Shoots
 -----------------
-<img src="https://github.com/mishokU/Cyberpunk2106/blob/master/screenshoots/main_screen.jpg?raw=true" height="400" width=auto>
-<img src="https://github.com/mishokU/Cyberpunk2106/blob/master/screenshoots/settings.jpg?raw=true" width=auto>
-<img src="https://github.com/mishokU/Cyberpunk2106/blob/master/screenshoots/switchers.jpg?raw=true" height="400" width=auto>
+<img src="https://github.com/mishokU/Cyberpunk2106/blob/master/screenshoots/main_screen.jpg?raw=true" height="400" width=auto><img src="https://github.com/mishokU/Cyberpunk2106/blob/master/screenshoots/settings.jpg?raw=true" width=auto><img src="https://github.com/mishokU/Cyberpunk2106/blob/master/screenshoots/switchers.jpg?raw=true" height="400" width=auto>
