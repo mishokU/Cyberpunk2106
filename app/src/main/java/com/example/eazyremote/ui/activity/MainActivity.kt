@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
 
     @Inject
     lateinit var viewModelFac : ViewModelProvider.Factory
-    lateinit var viewModelReceiver : DataViewModel
+    private lateinit var viewModelReceiver : DataViewModel
 
     private lateinit var binding : ActivityMainBinding
     private lateinit var navigation : NavController
