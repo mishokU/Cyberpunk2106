@@ -137,16 +137,19 @@ class CarSettingsFragment : Fragment(), Injectable {
         })
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setCarTemperature(temperature: String) {
-        binding.tempSalonTv.text = temperature
+        binding.tempSalonTv.text = "$temperature °C"
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setLiquidTemperature(temperature: String) {
-        binding.tempLiquidTv.text = temperature
+        binding.tempLiquidTv.text = "$temperature °C"
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setCarVoltage(voltage: String) {
-        binding.voltageTv.text = (voltage.toDouble() / 10.0).toString()
+        binding.voltageTv.text = (voltage.toDouble() / 10.0).toString() + " Вольт"
     }
 
     private fun setSecurityState(isSecure: Boolean) {

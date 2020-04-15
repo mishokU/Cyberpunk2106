@@ -7,6 +7,7 @@ import android.content.IntentFilter
 import android.net.ConnectivityManager
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
@@ -23,6 +24,7 @@ import com.example.eazyremote.domain.utils.Constants.ENTER_KEY
 import com.example.eazyremote.domain.utils.Constants.SERVER_IP
 import com.example.eazyremote.domain.utils.Constants.SERVER_PORT
 import com.example.eazyremote.domain.utils.Constants.openConnection
+import com.example.eazyremote.domain.utils.Constants.openReceiver
 import com.example.eazyremote.domain.viewmodels.DataViewModel
 import dagger.android.AndroidInjection
 import dagger.android.DispatchingAndroidInjector
@@ -133,6 +135,7 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
             } else {
                 networkStatus = "Network: Error"
                 supportActionBar?.title = networkStatus
+                Log.d("status", networkStatus)
                 openConnection = true
                 invalidateOptionsMenu()
             }
@@ -141,12 +144,18 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
 
     private fun checkServerConnection() {
         if(openConnection){
+
             viewModelReceiver.handleConnection(SERVER_IP, SERVER_PORT)
             val handler = Handler()
             handler.postDelayed({
                 openConnection = if(viewModelReceiver.isConnected()){
-                    viewModelReceiver.openReceiver()
                     viewModelReceiver.sendMessage(ENTER_KEY)
+                    false
+                } else {
+                    true
+                }
+                openReceiver = if(openReceiver) {
+                    viewModelReceiver.openReceiver()
                     viewModelReceiver.readData()
                     false
                 } else {
